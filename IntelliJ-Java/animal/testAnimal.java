@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package animal;
+
+/**
+ *
+ * @author Hoang Nhat
+ */
+public class testAnimal {
+    public static void main(String[] args) {
+        Animal[] animals = new Animal[2];
+        animals[0] = new Tiger();
+        animals[1] = new Chicken();
+        
+        for (Animal animal : animals) {
+            System.out.println(animal.makeSound());
+            
+            if (animal instanceof Edible) {
+                Edible edibler = (Chicken) animal;
+                System.out.println(edibler.howToEat());
+            }
+        }
+        
+        Fruit[] fruits = new Fruit[2]; 
+        fruits[0] = new Apple();
+        fruits[1] = new Orange();
+        
+        for (Fruit fruit : fruits) {
+            System.out.println(fruit.howToEat());
+        }
+            
+        
+        
+    }
+}
